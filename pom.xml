@@ -8,11 +8,52 @@
   <name>MultipleConnections-JDBC</name>
   <url>http://maven.apache.org</url>
   
+  <properties>
+  	<pgsql.version>42.1.4</pgsql.version>
+  	<mssql.version>6.0</mssql.version>
+  	<mysql.version>5.1.6</mysql.version>
+  	<oracle.version>11.2.0.3</oracle.version>
+  	<log4j.version>1.2.17</log4j.version>
+  	<junit.version>4.12</junit.version>
+  </properties>
+  
   <dependencies>
+  	<!-- PostgreSQL-Driver -->
+  	<dependency>
+  		<groupId>org.postgresql</groupId>
+  		<artifactId>postgresql</artifactId>
+  		<version>${pgsql.version}</version>
+  	</dependency>
+  	<!-- MSSQL-Driver -->
+  	<dependency>
+  		<groupId>com.microsoft.sqlserver</groupId>
+  		<artifactId>sqljdbc4</artifactId>
+  		<version>${mssql.version}</version>
+  	</dependency>
+  	<!-- MySQL-Driver -->
+  	<dependency>
+  		<groupId>mysql</groupId>
+  		<artifactId>mysql-connector-java</artifactId>
+  		<version>${mysql.version}</version>
+  	</dependency>
+  	<!-- Oracle-Driver -->
+  	<dependency>
+  		<groupId>oracle</groupId>
+  		<artifactId>ojdbc6</artifactId>
+  		<version>${oracle.version}</version>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>log4j</groupId>
+  		<artifactId>log4j</artifactId>
+  		<version>${log4j.version}</version>
+  		<scope>compile</scope>
+  	</dependency>
+  	
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
